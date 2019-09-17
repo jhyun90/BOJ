@@ -17,3 +17,10 @@ for i in range(10):
     print(mul_str.count(repr(i)))
 
 # print(mul_str.count(str(i)) for i in range(10)) -> why error?
+
+'''
+예제 입력 1
+150
+266
+427
+'''
