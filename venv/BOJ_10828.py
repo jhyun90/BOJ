@@ -49,3 +49,32 @@ for i in range(n_lines):
         print(stack.empty())
     elif cmd == "top":
         print(stack.top())
+
+'''
+예제 입력 1
+14
+push 1
+push 2
+top
+size
+empty
+pop
+pop
+pop
+size
+empty
+pop
+push 3
+empty
+top
+
+예제 입력 2
+7
+pop
+top
+push 123
+top
+pop
+top
+pop
+'''
