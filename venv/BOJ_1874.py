@@ -23,7 +23,10 @@ for i in range(n):
         j += 1
 
 # print(stack)
-# print(operator)
+
+if len(stack) == 0:
+    for x in operator:
+        print(x)
 
 if len(stack) != 0:
     print("NO")
