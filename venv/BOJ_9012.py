@@ -1,20 +1,20 @@
 
-T = int(input())
+n_lines = int(input())
 
-for i in range(T):
-    line = list(input())
+for i in range(n_lines):
+    string = list(input())
 
     stack = []
 
-    for j in range(len(line)):
-        if line[j] == '(':
-            stack.append(line[j])
+    for j in range(len(string)):
+        if string[j] == '(':
+            stack.append(string[j])
 
-        if line[j] == ')':
+        if string[j] == ')':
             if len(stack) != 0:
                 del stack[-1]
             else:
-                stack.append(line[j])
+                stack.append(string[j])
 
         # print(stack)
 
