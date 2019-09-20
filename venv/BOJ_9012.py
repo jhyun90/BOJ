@@ -3,7 +3,7 @@ n_lines = int(input())
 
 for i in range(n_lines):
     string = list(input())
-
+    # print(string)
     stack = []
 
     for j in range(len(string)):

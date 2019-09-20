@@ -1,38 +1,86 @@
+import sys
 
+n = int(sys.stdin.readline())
+n_arr = list(input().split())
+
+# result = [-1 for _ in range(n)]
+
+# n_arr[0] < n_arr[1], n_arr[2], n_arr[3] -> 큰 수 나오면 바로 멈춤 break
+# n_arr[1] < n_arr[2], n_arr[3] -> 큰 수 나오면 바로 멈춤 break
+# n_arr[2] < n_arr[3] -> 큰 수 나오면 바로 멈춤 break
+# n_arr[3] -> -1 추
+# 큰 수 없으면 -1로 채우기
+
+stack = []
 result = []
 
-def solution(n, n_arr):
+i = 0
+# for i in range(n):
+while i < n:
+    print("i:", i)
+    stack.append(n_arr[i])
 
-    stack = []
+    while stack[0] < stack[-1]:
+        print("stack before pop:", stack)
+        result.append(stack[-1])
+        print("result:", result)
+        del stack[0]
+        print("stack:", stack)
 
-    for i in range(len(n_arr)):
-        stack.append(n_arr[i])
 
-        while stack[0] < stack[-1]:
-            # print('??')
-            result.append(stack[-1])
+    if i == n - 1:
+        if len(stack) == 1:
+            result.append(-1)
+
+        if len(stack) == n:
+            result.append(-1)
             del stack[0]
 
-        if i == n - 1:
-            if len(stack) == 1:
-                result.append(-1)
-                # del stack[0]
+    i += 1
+    print()
 
-            else:
-                if stack[0] == max(stack):
-                    result.append(-1)
-                    del stack[0]
+print("final:", result)
 
-                    n_arr = stack
-                    n = len(n_arr)
 
-                    solution(n, n_arr)
+'''
+예제 입력 1
+4
+3 5 2 7
 
-    # print(result)
-    return result
+예제 입력 2
+4
+9 5 4 8
+'''
 
-n = int(input())
-n_arr = list(input().split())
+# import sys
+#
+# n = int(sys.stdin.readline())
+#
+# n_arr = list(map(int, sys.stdin.readline().split()))
 # print(n_arr)
-
-print(solution(n, n_arr))
+#
+# idx = []
+# result = [-1 for _ in range(n)]
+#
+# idx.append(0)
+#
+# i = 1
+#
+# while idx and i < n:
+#     print("i:", i)
+#     print("idx[-1]:", idx[-1])
+#
+#     while idx and n_arr[idx[-1]] < n_arr[i]:
+#         print("n_arr[", i, "]:", n_arr[i])
+#         result[idx[-1]] = n_arr[i]
+#         print("result[", idx[-1], "]:", result[idx[-1]])
+#         idx.pop()
+#         print("idx after pop:", idx)
+#
+#     idx.append(i)
+#     print("idx:", idx)
+#     i += 1
+#     print()
+#
+# for i in range(n):
+#     print(result[i], end=' ')
