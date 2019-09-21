@@ -31,6 +31,8 @@
 # string = 'aabbaccc'
 # string = 'abcabcdede'
 # string = 'letsgogogo'
+# string = 'nowletsgogogoletsgogogo' # now2(lets3(go))
+# string = 'nowletsgogogoletsgogogoandrunrunrun' # now2(lets3(go))and3(run)
 
 string = input()
 
@@ -83,9 +85,13 @@ for i in range(1, n // 2 + 1): # range(1, 6): 1, 2, 3, 4, 5
 
         else:
             if cnt > 1:
-                result += str(cnt)
+                result += str(cnt) + '('
 
             result += stack[0]
+
+            if cnt > 1:
+                result += ')'
+
             del stack[0]
             cnt = 1
 
