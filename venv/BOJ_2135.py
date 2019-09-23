@@ -1,33 +1,4 @@
 
-# string = 'abccddd'
-#
-# stack = []
-# stack.append(string[0])
-# count = 1
-# result = ''
-#
-# for i in range(1, len(string)):
-#     stack.append(string[i])
-#
-#     print(stack[0], stack[-1])
-#
-#     if stack[0] == stack[-1]:
-#         count += 1
-#         del stack[0]
-#
-#     else:
-#         if count > 1:
-#             result += str(count)
-#
-#         result += stack[0]
-#         del stack[0]
-#         count = 1
-#
-# result += stack[0] + str(count)
-#
-# print(result)
-
-
 # string = 'aabbaccc'
 # string = 'abcabcdede'
 # string = 'letsgogogo'
@@ -55,6 +26,33 @@ for i in range(1, n // 2 + 1): # range(1, 6): 1, 2, 3, 4, 5
     # string[7:8] begin = 7
     # string[8:9] begin = 8
     # string[9:10] begin = 9
+
+    # string = 'abccddd'
+    # stack = []
+    # stack.append(string[0])
+    # count = 1
+    # result = ''
+    #
+    # for i in range(1, len(string)):
+    #     stack.append(string[i])
+    #
+    #     print(stack[0], stack[-1])
+    #
+    #     if stack[0] == stack[-1]:
+    #         count += 1
+    #         del stack[0]
+    #
+    #     else:
+    #         if count > 1:
+    #             result += str(count)
+    #
+    #         result += stack[0]
+    #         del stack[0]
+    #         count = 1
+    #
+    # result += stack[0] + str(count)
+    #
+    # print(result)
 
     # else:
         # if i == 2:
